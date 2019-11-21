@@ -1,6 +1,10 @@
 import _store from "../store.js"
 
-class SessionsService {}
+class SessionsService {
+ constructor() {
+  console.log('Hello from sesionsService')
+ }
+}
 
 const SESSIONSERVICE = new SessionsService();
 
