@@ -33,4 +33,8 @@ export default class SessionsController {
     formData.reset()
     _drawSessions()
   }
+  deleteSpeaker (sessionId, speakerId) {
+    SessionsService.deleteSpeaker(sessionId, speakerId)
+    _drawSessions()
+  }
 }
