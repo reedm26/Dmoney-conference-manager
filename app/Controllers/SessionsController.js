@@ -17,4 +17,20 @@ export default class SessionsController {
     _drawSessions();
     console.log('Hello from sesionsController')
   }
+
+  addSpeaker(event, sessionId){
+    event.preventDefault()
+    let formData = event.target
+
+    let newSpeaker = {
+      name: formData.name.value,
+      topic: formData.topic.value,
+      time: formData.time.value,
+      sessionId
+    }
+
+    SessionsService.addSpeaker(newSpeaker)
+    formData.reset()
+    _drawSessions()
+  }
 }

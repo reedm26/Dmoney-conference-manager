@@ -8,5 +8,13 @@ export default class Speaker {
     this.topic = topic;
     this.time = time;
   }
+
+  get template(){
+    return `
+            <dt>${this.name}</dt>
+            <dd>${this.topic}</dd>
+            <dd>${this.time}</dd>
+    `
+  }
   // TODO add HTML template
 }

@@ -10,10 +10,13 @@ export default class Session {
 
   //NOTE getters return property so do not need to be invoked
   get template() {
-    return `
+    return /*html*/`
       <div class="col-5 mt-3 p-3 border rounded bg-info">
           <h1 class="text-center border-bottom">${this.name}</h1>
-          <form class="mx-auto" onsubmit="app.sessionsController.addSpeaker(event)">
+          <dl class="ml-5">
+          ${this.drawSpeakers()}
+          </dl>
+          <form class="mx-auto" onsubmit="app.sessionsController.addSpeaker(event, '${this.id}')">
                         <div class="form-group row justify-content-center">
                             <label for="name" class="col-sm-1-12 col-form-label"></label>
                             <div class="col-sm-1-12">
@@ -41,5 +44,10 @@ export default class Session {
                     </form>
           </div>
     `
+  }
+  drawSpeakers(){
+    let template = ''
+    this.speakers.forEach(speaker => template += speaker.template);
+    return template
   }
 }
