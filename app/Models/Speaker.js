@@ -8,4 +8,5 @@ export default class Speaker {
     this.topic = topic;
     this.time = time;
   }
+  // TODO add HTML template
 }

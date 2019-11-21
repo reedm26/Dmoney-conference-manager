@@ -3,7 +3,7 @@ const STORAGEKEY = "CONFERENCE.STATE";
 
 let _state = {
   /** @type {Session[]} */
-  sessions: []
+  sessions: [new Session({name: "Morning Session", speakers: []}), new Session({name: "Midnight Session ", speakers: []})]
 };
 
 function _loadState() {
