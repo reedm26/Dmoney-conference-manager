@@ -27,4 +27,5 @@ class Store {
 }
 
 const store = new Store();
+// store.saveState();
 export default store;

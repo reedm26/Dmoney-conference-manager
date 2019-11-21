@@ -14,6 +14,7 @@ function _drawSessions() {
 // public
 export default class SessionsController {
   constructor() {
+    _drawSessions();
     console.log('Hello from sesionsController')
   }
 }
