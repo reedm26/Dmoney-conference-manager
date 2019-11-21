@@ -8,6 +8,7 @@ export default class Session {
     this.speakers = speakers.map(s => new Speaker(s));
   }
 
+  //NOTE getters return property so do not need to be invoked
   get template() {
     return `
       <div class="col-5 mt-3 p-3 border rounded bg-info">

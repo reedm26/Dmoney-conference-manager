@@ -7,7 +7,8 @@ function _drawSessions() {
 
  let template = ''
  let sessions = _store.State.sessions
- 
+ sessions.forEach(session => template += session.template)
+ document.querySelector("#sessions").innerHTML = template
 }
 
 // public
